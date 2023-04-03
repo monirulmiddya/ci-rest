@@ -1,0 +1,21 @@
+{
+    "name": "mrmoni/ci-rest",
+    "description": "Codeigniter 3 Restful API Base Controller",
+    "homepage": "https://github.com/mrmoni/ci-rest",
+    "keywords": ["codeIgniter", "api", "controller", "auth"],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "mrmoni\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "support": {
+        "issues": "https://github.com/mrmoni/ci-rest/issues",
+        "source": "https://github.com/mrmoni/ci-rest"
+    }
+}
