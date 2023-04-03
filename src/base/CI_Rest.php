@@ -35,13 +35,6 @@ class CI_Rest extends \CI_Controller
      * @var string mrmoni\http\Response - format
      */
     protected $format;
-
-    /**
-     * Body Format - flag
-     * 
-     * @var bool Default $bodyFormat for json()
-     */
-    protected $bodyFormat = false;
     
     function __construct() 
     {
