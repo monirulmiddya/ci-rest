@@ -1,6 +1,6 @@
 <?php
 
-namespace mrmoni\CI_Rest;
+namespace mrmoni\base;
 
 use mrmoni\http\Request;
 use mrmoni\http\Response;
