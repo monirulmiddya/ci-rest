@@ -305,7 +305,7 @@ class Response
      *
      * @return string
      */
-    protected function serverError(string $message = 'Internal Server Error',int $code = null)
+    public function serverError(string $message = 'Internal Server Error',int $code = null)
     {
         return $this->json($this->respondFormat($code == null ? $this->codes['server_error'] : $code, $message), $this->codes['server_error']);
     }
