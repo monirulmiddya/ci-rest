@@ -29,7 +29,7 @@ class Request
      * @var string
      */
     private $_rawBody;
-    
+
     /**
      * Retrieves the HTTP method of the request.
      *
@@ -83,12 +83,13 @@ class Request
     public function getBodyParams()
     {
         if ($this->_bodyParams === null) {
-        
+
             $contType = $this->getContentType();
 
             if (strcasecmp($contType, 'application/json') == 0) {
                 // for json content type
                 $this->_bodyParams = json_decode($this->getRawBody(), true);
+                $_POST = $this->_bodyParams;
             } elseif ($this->getMethod() === 'POST') {
                 // form params in $_POST
                 $this->_bodyParams = $_POST;
@@ -106,7 +107,8 @@ class Request
      * @return string the request body
      */
 
-    public function all(){
+    public function all()
+    {
         return $this->getBodyParams();
     }
 
@@ -116,10 +118,11 @@ class Request
      * @return string
      */
 
-     public function get($field){
+    public function get($field)
+    {
         $_params = $this->getBodyParams();
 
-        if(isset($_params[$field])){   
+        if (isset($_params[$field])) {
             $this->_field_val = $_params[$field];
         }
 
